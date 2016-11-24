@@ -1,0 +1,11 @@
+<table ng-if="NarrowItDown.found.length != 0">
+<tr ng-repeat="item in NarrowItDown.found">
+  <td>
+      - {{ item.name }}, {{ item.short_name }}, {{ item.description }}
+  </td>
+  <td>
+      <button ng-click="NarrowItDown.remove($index)">Don't want this one!</button>
+  </td>
+</tr>
+</table>
+<div class="error" ng-if="NarrowItDown.found.length == 0">Nothing found!</div>
