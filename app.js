@@ -6,6 +6,7 @@ angular.module('NarrowItDownApp',[])
 .service('MenuSearchService',MenuSearchService)
 .directive('foundItems',foundItems);
 
+
 //------------ Directive ------------//
 function foundItems() {
   var ddo = {
@@ -20,6 +21,7 @@ function foundItems() {
   };
   return ddo;
 };
+
 
 //------------ Controller ------------//
 NarrowItDownController.$inject = ['MenuSearchService'];
@@ -42,6 +44,7 @@ function NarrowItDownController(MenuSearchService){
     NarrowItDown.found = MenuSearchService.removeItem(NarrowItDown.found, index);
   }
 }
+
 
 //------------ Service ------------//
 MenuSearchService.$inject = ['$http']
